@@ -47,7 +47,7 @@ recyclerView.setAdapter(c);
         localDataSet = dataSet;
     }
 
-    // Create new views (invoked by the layout manager)
+    //2. Create new views (invoked by the layout manager)
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
 
@@ -58,7 +58,7 @@ recyclerView.setAdapter(c);
         return new ViewHolder(view);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    //3. Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
 
@@ -67,7 +67,7 @@ recyclerView.setAdapter(c);
         viewHolder.getTextView().setText(localDataSet[position]);
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    //4. Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return localDataSet.length;
